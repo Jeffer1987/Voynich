@@ -1,0 +1,255 @@
+{
+  "track": "B",
+  "analysis_type": "Comparative Linguistics",
+  "morphology": {
+    "top_prefixes": {
+      "ch": 2218,
+      "qo": 2040,
+      "qok": 1902,
+      "da": 1520,
+      "che": 1201,
+      "sh": 1137,
+      "dai": 989,
+      "ok": 928,
+      "she": 846,
+      "ot": 724,
+      "oka": 633,
+      "cho": 579,
+      "ai": 506,
+      "aii": 506,
+      "ota": 425,
+      "dar": 299,
+      "ote": 299,
+      "oke": 295,
+      "sho": 291,
+      "dal": 232
+    },
+    "top_suffixes": {
+      "in": 2652,
+      "iin": 2050,
+      "dy": 1921,
+      "edy": 1781,
+      "ey": 1572,
+      "eey": 954,
+      "ol": 858,
+      "ar": 730,
+      "al": 704,
+      "hey": 618,
+      "ain": 602,
+      "hol": 553,
+      "kal": 343,
+      "dar": 299,
+      "hy": 298,
+      "kar": 285,
+      "dal": 232,
+      "or": 199,
+      "hor": 199,
+      "eol": 167
+    },
+    "root_families_count": 20
+  },
+  "positional": {
+    "first_letters": {
+      "o": 2783,
+      "c": 2218,
+      "q": 2040,
+      "d": 1753,
+      "s": 1560,
+      "a": 1169,
+      "y": 329,
+      "l": 192,
+      "r": 170
+    },
+    "last_letters": {
+      "y": 4163,
+      "n": 2652,
+      "l": 2376,
+      "r": 1709,
+      "o": 118
+    },
+    "second_letters": {
+      "h": 3355,
+      "o": 2040,
+      "a": 1638,
+      "k": 928,
+      "l": 814,
+      "r": 780,
+      "t": 724,
+      "i": 506,
+      "y": 233
+    }
+  },
+  "grammar_patterns": {
+    "qo_prefix": {
+      "count": 2040,
+      "examples": [
+        "qokeey",
+        "qokeedy",
+        "qokain",
+        "qokedy",
+        "qokaiin",
+        "qokal",
+        "qokar",
+        "qoky",
+        "qol"
+      ]
+    },
+    "ch_prefix": {
+      "count": 1639,
+      "examples": [
+        "chedy",
+        "chey",
+        "cheey",
+        "cheol",
+        "chy",
+        "chdy",
+        "chckhy"
+      ]
+    },
+    "sh_prefix": {
+      "count": 1137,
+      "examples": [
+        "shedy",
+        "shey",
+        "shol",
+        "sheey",
+        "sho"
+      ]
+    },
+    "aiin_suffix": {
+      "count": 2050,
+      "examples": [
+        "daiin",
+        "aiin",
+        "qokaiin",
+        "okaiin",
+        "otaiin",
+        "saiin"
+      ]
+    },
+    "dy_suffix": {
+      "count": 2154,
+      "examples": [
+        "chedy",
+        "shedy",
+        "qokeedy",
+        "qokedy",
+        "dy",
+        "otedy",
+        "chdy",
+        "okedy"
+      ]
+    },
+    "ey_suffix": {
+      "count": 618,
+      "examples": [
+        "chey",
+        "shey"
+      ]
+    },
+    "ol_suffix": {
+      "count": 1411,
+      "examples": [
+        "ol",
+        "chol",
+        "shol",
+        "cheol",
+        "qol"
+      ]
+    },
+    "ar_suffix": {
+      "count": 1132,
+      "examples": [
+        "ar",
+        "dar",
+        "qokar",
+        "otar",
+        "okar"
+      ]
+    }
+  },
+  "language_comparison": {
+    "entropy": {
+      "Voynich": 3.87,
+      "English": 4.5,
+      "Latin": 4.0,
+      "Italian": 4.2,
+      "Hebrew": 4.1,
+      "Arabic": 4.3,
+      "German": 4.3,
+      "Constructed (avg)": 3.5,
+      "Random": 4.7
+    },
+    "word_length": {
+      "Voynich": 5.04,
+      "English": 4.5,
+      "Latin": 5.8,
+      "Italian": 4.8,
+      "Hebrew": 4.5,
+      "Arabic": 5.2,
+      "German": 6.3,
+      "Spanish": 4.9
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "H1",
+      "title": "Constructed/Artificial Language",
+      "evidence": [
+        "Low entropy (3.87) closer to constructed languages (3.5) than natural (4.0-4.5)",
+        "Highly regular morphological patterns",
+        "Limited alphabet (28 unique letters)",
+        "Zipf deviation suggests artificial word frequency distribution"
+      ],
+      "confidence": "HIGH",
+      "counter_evidence": [
+        "Text has syntactic shifts suggesting natural evolution",
+        "Two distinct 'languages' (Currier A and B) found"
+      ]
+    },
+    {
+      "id": "H2",
+      "title": "Encoded Natural Language (Steganography)",
+      "evidence": [
+        "Word patterns suggest underlying structure",
+        "'qo' prefix might encode articles/prepositions",
+        "Suffix patterns (-dy, -aiin) might encode grammatical cases",
+        "Top word 'daiin' (799x) could be encoded function word"
+      ],
+      "confidence": "MEDIUM",
+      "counter_evidence": [
+        "No consistent mapping to any known cipher system",
+        "Character frequency doesn't match simple substitution"
+      ]
+    },
+    {
+      "id": "H3",
+      "title": "Polyphonic/Multi-value System",
+      "evidence": [
+        "EVA 'characters' might represent syllables or phonemes",
+        "'ch', 'sh', 'qo' as digraphs suggest phonetic units",
+        "Low unique letter count (28) but high unique words (8381)",
+        "Consistent bigram patterns (ch=11007, he=8198)"
+      ],
+      "confidence": "MEDIUM",
+      "counter_evidence": [
+        "Would require unknown phonetic mapping"
+      ]
+    },
+    {
+      "id": "H4",
+      "title": "Medieval Italian/Romance with Abbreviation System",
+      "evidence": [
+        "Average word length (5.04) close to Italian (4.8)",
+        "Suffix patterns similar to Romance conjugation",
+        "Historical context (15th century Italy) supports",
+        "Some botanical terms may correlate with Italian herbals"
+      ],
+      "confidence": "LOW-MEDIUM",
+      "counter_evidence": [
+        "No clear Latin/Italian vocabulary matches",
+        "Entropy significantly lower than Italian (3.87 vs 4.2)"
+      ]
+    }
+  ]
+}

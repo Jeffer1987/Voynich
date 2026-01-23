@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this dataset or analysis, please cite it as below."
+authors:
+  - family-names: "Meijer"
+    given-names: "Jeffrey JGT"
+    orcid: "https://orcid.org/0000-0000-0000-0000"  # Replace with your ORCID if you have one
+    affiliation: "AI Kapitein, AIDols Research Collective"
+title: "Multi-Track AI Analysis of MS 408: Independent Confirmation of the Jaccard Anomaly"
+version: 1.0.0
+date-released: 2026-01-22
+url: "https://github.com/Jeffer1987/Voynich"
+license: CC-BY-4.0
+keywords:
+  - Voynich Manuscript
+  - MS 408
+  - Cryptanalysis
+  - Jaccard Anomaly
+  - Statistical Analysis
+  - Computational Linguistics
+abstract: >
+  Independent AI-driven statistical analysis of the Voynich Manuscript (MS 408), confirming the existence of
+  the "Jaccard Anomaly" (extreme line-to-line vocabulary independence). This study provides reproducible 
+  quantitative evidence (J = 0.0226, Entropy = 3.87 bits) for non-natural language structure, validating 
+  the statistical observations of S.A. Quevedo (2026) while maintaining neutrality on specific mechanical 
+  reconstructions.
+references:
+  - type: article
+    authors:
+      - family-names: "Quevedo Vinueza"
+        given-names: "Steven Alexander"
+    title: "The Quevedo Mechanism"
+    year: 2026
+    month: 1
+    notes: "SafeCreative Registration: 2601194305209"

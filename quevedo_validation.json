@@ -1,0 +1,150 @@
+{
+  "jaccard_analysis": {
+    "average": 0.022602593985271757,
+    "median": 0.0,
+    "quevedo_claim": 0.08,
+    "natural_language_range": [
+      0.25,
+      0.35
+    ],
+    "validation": "CONFIRMED"
+  },
+  "gallow_correlation": {
+    "f": {
+      "hol": 15,
+      "cho": 12,
+      "tai": 11,
+      "che": 11,
+      "pch": 9,
+      "aii": 8,
+      "r": 7,
+      "ota": 6,
+      "oke": 6,
+      "heo": 5
+    },
+    "k": {
+      "heo": 36,
+      "che": 28,
+      "oke": 27,
+      "cho": 22,
+      "aii": 21,
+      "l": 20,
+      "hol": 18,
+      "hey": 17,
+      "pch": 15,
+      "hor": 15
+    },
+    "p": {
+      "che": 144,
+      "pch": 114,
+      "oke": 114,
+      "hed": 113,
+      "oka": 89,
+      "heo": 85,
+      "aii": 75,
+      "r": 66,
+      "cho": 61,
+      "hee": 61
+    },
+    "t": {
+      "che": 126,
+      "oka": 115,
+      "heo": 99,
+      "hed": 98,
+      "aii": 95,
+      "oke": 95,
+      "hee": 83,
+      "r": 79,
+      "cho": 70,
+      "l": 59
+    }
+  },
+  "line_position": {
+    "first_word_entropy": 10.312119457034264,
+    "last_word_entropy": 10.23728575522784,
+    "first_words_top10": [
+      [
+        "daiin",
+        161
+      ],
+      [
+        "y",
+        75
+      ],
+      [
+        "saiin",
+        56
+      ],
+      [
+        "dain",
+        49
+      ],
+      [
+        "dar",
+        41
+      ],
+      [
+        "o",
+        38
+      ],
+      [
+        "sol",
+        37
+      ],
+      [
+        "sain",
+        36
+      ],
+      [
+        "or",
+        33
+      ],
+      [
+        "ol",
+        33
+      ]
+    ],
+    "last_words_top10": [
+      [
+        "daiin",
+        131
+      ],
+      [
+        "dy",
+        100
+      ],
+      [
+        "am",
+        62
+      ],
+      [
+        "dam",
+        54
+      ],
+      [
+        "y",
+        54
+      ],
+      [
+        "dal",
+        49
+      ],
+      [
+        "dar",
+        45
+      ],
+      [
+        "s",
+        44
+      ],
+      [
+        "aiin",
+        43
+      ],
+      [
+        "ol",
+        42
+      ]
+    ]
+  }
+}
