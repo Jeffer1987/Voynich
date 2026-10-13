@@ -16,7 +16,7 @@ th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);verti
 ol li,ul li{margin:4px 0}
 </style></head><body><main>
 <h1>Voynich-zwerm: status</h1>
-<p class="sub">13 okt 2026 · Golf 1 + 2 afgerond · supervisor Opus 5.5 · 1× Haiku 5.5, 2× Sonnet 5.5</p>
+<p class="sub">13 okt 2026 · Golf 1–4 afgerond · <a href="https://github.com/Jeffer1987/Voynich/pull/1">PR #1</a> · supervisor Opus 5.5 · 1× Haiku 5.5, 2× Sonnet 5.5</p>
 
 <div class="kpis">
 <div class="k"><b>81</b><span>claims geïnventariseerd</span></div>
@@ -55,15 +55,23 @@ ol li,ul li{margin:4px 0}
 <li>Geen homogene tekst (A/B, handen en secties verschillen)</li>
 </ul>
 
-<h2>Kandidaat-families voor Golf 3</h2>
+<h2>Golf 3–4: literatuur en vervolgtoetsen</h2>
 <div class="wrap"><table>
-<tr><th>ID</th><th>Familie</th><th>Waarom</th></tr>
-<tr><td class="t">K1</td><td>Verbose cipher of syllabarium met afkortingen</td><td>Verklaart de lage h2 én de korte woorden</td></tr>
-<tr><td class="t">K2</td><td>Positiegebonden schrijfconventie (eindvormen, brevigrafie)</td><td>Verklaart -m aan het regeleinde en p/t aan het begin</td></tr>
-<tr><td class="t">K3</td><td>Generator met toestanden per regel/alinea</td><td>Alternatieve verklaring voor H2/H3</td></tr>
+<tr><th>Toets</th><th>Uitkomst</th><th>Oordeel</th></tr>
+<tr><td class="t">Literatuur</td><td>h2 (Bennett 1976), regelranden (Currier 1976) en gallows (D'Imperio 1978) waren al bekend. Nieuw: de nulmodellen, de dubbele eis van h2 en woordlengte, en de wisseling van stammen. Quevedo 2026 is niet gevonden.</td><td class="warn">Context</td></tr>
+<tr><td class="t">4A</td><td>Op dezelfde stammen wordt <i>-ar/-al</i> → <i>-am</i> aan het regeleinde (54% tegenover 5%). Fout in de woordscheiding uitgesloten.</td><td class="ok">Eindvorm (allograaf)</td></tr>
+<tr><td class="t">4B</td><td>Hand 1 = A; A/B = twee instellingen van één systeem; sectie is een eigen laag; geen vloeiende overgang.</td><td class="ok">Ontward</td></tr>
+<tr><td class="t">4C</td><td>Syllabarium en abjad weerlegd. Verbose cipher + afkorting komt het dichtst bij, maar de hapaxen kloppen niet (0,61 tegenover 0,71). 0 van ~3000 configuraties haalt alle eisen.</td><td class="warn">Deels haalbaar</td></tr>
 </table></div>
 
+<h2>Laatste beeld</h2>
+<ul>
+<li><span class="bad">NIET:</span> Jaccard-anomalie · eenvoudige substitutie · eenvoudig syllabarium of abjad · proza zonder regelbewustzijn · homogene tekst</li>
+<li><span class="ok">WEL:</span> positiegebonden lettervormen (-am, p-gallows) · twee instellingen A/B per schrijver · woordenschat per onderwerp</li>
+<li><span class="warn">OPEN:</span> verbose codering van afgekorte tekst; de rijkdom aan woordvormen is niet verklaard</li>
+</ul>
+
 <h2>Open keuzes</h2>
-<ol><li>Welke familie toetsen in Golf 3?</li><li>Zenodo-record: later beslissen</li><li>PR: branch gepusht, PR nog aan te maken</li></ol>
-<p class="sub">Details: 00_STATUS.md · 01_claim_inventory.md · 02_code_audit.md · 03_remeasurement.md · 04_H1_eva_segmentation.md · 05_H2H3_line_paragraph.md · scripts/</p>
+<ol><li>Golf 5: middeleeuwse kruidentekst als bron, nagebootste eindvormen, andere transcripties</li><li>Zenodo-record: erratum of nieuwe versie?</li></ol>
+<p class="sub">Details: 00_STATUS.md · 01_claim_inventory.md · 02_code_audit.md · 03_remeasurement.md · 04_H1_eva_segmentation.md · 05_H2H3_line_paragraph.md · 06–10 · scripts/</p>
 </main></body></html>

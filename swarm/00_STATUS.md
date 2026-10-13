@@ -3,7 +3,7 @@
 **Datum:** 2026-10-13 · **Supervisor:** Claude Opus 5.5 · **Zwerm:** 1× Haiku 5.5, 2× Sonnet 5.5
 **Branch:** `claude/voynich-subagents-hypotheses-593993`
 
-> **Stand:** Golf 1 en Golf 2 afgerond. Zie onderaan voor de resultaten van Golf 2 en het bijgewerkte beeld.
+> **Stand:** Golf 1–4 afgerond. PR: https://github.com/Jeffer1987/Voynich/pull/1. Zie onderaan voor Golf 3–4 en het laatste beeld.
 
 ## Wat is er gedaan (Golf 1)
 
@@ -103,8 +103,28 @@ Jouw keuzes: baselines downloaden = ja · Golf 2 = H1 + H2/H3 · Zenodo = later 
 - **K2:** een **positiegebonden schrijfconventie** (eindvormen, zoals in Latijnse brevigrafie of Arabisch/Hebreeuws schrift).
 - **K3:** een **generator met toestanden** (regel en alinea als reset).
 
+## Golf 3: literatuur ([06](06_lit_zenodo.md), [07](07_lit_zandbergen.md))
+
+- **Al bekend:** de lage h2 (Bennett 1976), de effecten aan de regelrand (Currier 1976, sterker in B) en de gallows aan het begin van een alinea (D'Imperio 1978).
+- **Nieuw bij ons:** de toetsen tegen een schud-nulmodel, de dubbele eis van h2 én woordlengte, de *-m* alleen in het buitenste woord, en de wisseling van stammen.
+- **Quevedo 2026 is op Zenodo niet gevonden.** Het overige Voynich-werk op Zenodo bestaat uit preprints en zelfpublicaties.
+- **Lessen:** vergelijk binnen één sectie, en controleer op artefacten van woordscheiding en van de gekozen transcriptie.
+
+## Golf 4: toetsen naar aanleiding van de literatuur
+
+| Toets | Uitkomst |
+|---|---|
+| **4A: mechanisme achter *-m*** ([08](08_line_mechanism.md)) | **Eindvorm (allograaf), de beste verklaring:** op dezelfde stammen wordt *-ar*/*-al* → *-am* (54% aan het regeleinde tegenover 5% midden in de regel). Fout in de woordscheiding van de transcriptie: **weerlegd**. Opvulling van de marge en een generator per regel: verzwakt. Gerepliceerd in RF1b. |
+| **4B: A/B, handen, secties** ([09](09_deconfound_AB.md)) | Hand 1 = A, handen 2/3/5 = B (bijna samenvallend). A/B = **twee instellingen van één systeem** (*-edy*/*-dy*/*-ol*), niet h2 of woordlengte. Sectie is een sterke eigen laag. Geen vloeiende overgang. |
+| **4C: K1-simulatie** ([10](10_K1_simulation.md)) | **Gedeeltelijk haalbaar, niet aangenomen.** Geen van ~3000 configuraties haalt alle eisen tegelijk. Syllabarium en abjad zijn **weerlegd** (h2 2,4–3,4). Verbose cipher + afkorting (Italiaans) komt het dichtst bij: h2 en woordlengte kloppen, maar het **aandeel hapaxen** blijft 0,61 tegenover 0,71. 6–7 parameters voor 4 doelen, dus risico op overfitting. |
+
+## Laatste beeld
+
+**Wat het NIET is (hard):** geen "Jaccard-anomalie"; geen eenvoudige substitutie van Latijn, Italiaans, Duits of Engels; geen syllabarium of abjad in eenvoudige vorm; geen doorlopend proza zonder regelbewustzijn; geen fout in de woordscheiding; geen homogene tekst.
+
+**Wat het WEL lijkt:** een schrift met **positiegebonden lettervormen** (eindvorm *-am* aan het regeleinde, *p*-gallows aan het begin van een alinea), **twee "instellingen" (A/B)** die vastzitten aan schrijvers, en een **woordenschat per onderwerp**. De lage h2 en de korte woorden passen het best bij een **verbose codering van afgekorte tekst**, maar de rijkdom aan woordvormen (hapaxen) is nog niet verklaard.
+
 ## Open keuzes
 
-1. Golf 3: welke kandidaat-familie toetsen?
-2. Zenodo-record 18346527: nog steeds "later beslissen".
-3. PR: de branch staat gepusht; de PR is nog niet aangemaakt (`gh` ontbreekt).
+1. **Golf 5:** (a) K1 opnieuw met een middeleeuwse Latijnse kruidentekst als bron; (b) toetsen of een model ook de eindvorm *-am*, de *p*-gallows en A/B reproduceert; (c) andere transcripties en een herhaling binnen één sectie.
+2. **Zenodo-record 18346527:** de kernclaim is weerlegd. Wil je een erratum of een nieuwe versie?
