@@ -1,0 +1,56 @@
+== rf1b lines 3718
+final -m rate 0.149 mid -m rate 0.0084
+T1 stems seen both mid and final 629 final tokens covered 2941
+T1a within-stem position-label permutation: ending, delta(final share - mid share), null sd, z
+   m +0.140 0.005 +29.1
+   l -0.063 0.007 -8.7
+   r -0.115 0.007 -15.7
+   n +0.011 0.003 +3.5
+   s -0.005 0.004 -1.4
+   y +0.026 0.006 +4.5
+   g +0.018 0.002 +9.4
+   o -0.022 0.004 -5.9
+   d +0.012 0.003 +4.7
+   a +0.000 0.001 +0.1
+   e -0.002 0.001 -2.0
+   k -0.002 0.001 -2.1
+   t -0.001 0.001 -1.2
+   i +0.000 0.000 +0.7
+T1b mid-line ending distribution of the stem of final-m words (n=452) vs final-nonm words (n=2487)
+   m final-m stems 0.038  nonm-final stems 0.009  diff z=+14.1
+   l final-m stems 0.402  nonm-final stems 0.155  diff z=+26.2
+   r final-m stems 0.479  nonm-final stems 0.162  diff z=+33.1
+   n final-m stems 0.053  nonm-final stems 0.178  diff z=-7.9
+   s final-m stems 0.012  nonm-final stems 0.041  diff z=-6.0
+   y final-m stems 0.006  nonm-final stems 0.389  diff z=-20.1
+   g final-m stems 0.004  nonm-final stems 0.001  diff z=+20.1
+   o final-m stems 0.001  nonm-final stems 0.042  diff z=-8.6
+   d final-m stems 0.002  nonm-final stems 0.010  diff z=-3.9
+   share of final-m tokens whose stem occurs mid-line as -l: 0.90 vs final-nonm tokens 0.49
+   share of final-m tokens whose stem occurs mid-line as -r: 0.94 vs final-nonm tokens 0.55
+   share of final-m tokens whose stem occurs mid-line as -n: 0.51 vs final-nonm tokens 0.35
+   share with stem attested mid-line at all: m-final 0.82, nonm-final 0.79
+   -m rate k-th from end k=1: 0.190
+   -m rate k-th from end k=2: 0.011
+   -m rate k-th from end k=3: 0.006
+   -m rate k-th from end k=4: 0.009
+T2 logit -m ~ prefix chars: b=0.37 z=8.1 (per sd)
+   + n words: b_pre=0.08(z0.6) b_n=0.31(z2.5)
+   + folio-relative fill: b_pre=0.12 b_n=0.30 b_rel=-0.06 (z-0.8)
+   -m rate by prefix-char tercile within words-per-line strata (low/mid/high), r and z vs shuffle
+   n=3-5 lines=939: 9.8% / 8.8% / 9.6%  r=-0.020 z=-0.5
+   n=6-7 lines=902: 12.1% / 12.3% / 12.1%  r=0.012 z=0.3
+   n=8-9 lines=940: 16.0% / 11.1% / 17.9%  r=0.040 z=1.3
+   n=10-20 lines=928: 18.2% / 25.6% / 26.5%  r=0.060 z=1.8
+   fixed n, longer words (chars/word): b=-0.01 z=-0.2
+T3 gap before last word: {'.': 3603, ',': 115}
+   -m rate when gap before last word is '.': 14.8% n=3603
+   -m rate when gap before last word is ',': 16.5% n=115
+   lines with uncertain gap in last two gaps: n=176 -m 17.0% ; without: n=3542 -m 14.8%
+   clean subset (certain gap before word and, mid-line, after word): final -m 14.8% (n=3603), mid -m 0.86% => ratio 17.2x
+   uncertain-gap rate before last word 3.1% vs mid gaps 1.9%
+   last-word len when gap .: 4.95
+   last-word len when gap ,: 3.39
+   mid-line word -m rate when followed by uncertain gap 0.00% (n=433) vs certain 0.86%
+   final-m tokens whose exact type occurs mid-line: 0.51 ; final-nonm: 0.73
+   standalone mid-line words: m=0 am=10 ; final: m=4 am=57
