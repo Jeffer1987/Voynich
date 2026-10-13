@@ -3,6 +3,8 @@
 **Datum:** 2026-10-13 · **Supervisor:** Claude Opus 5.5 · **Zwerm:** 1× Haiku 5.5, 2× Sonnet 5.5
 **Branch:** `claude/voynich-subagents-hypotheses-593993`
 
+> **Stand:** Golf 1 en Golf 2 afgerond. Zie onderaan voor de resultaten van Golf 2 en het bijgewerkte beeld.
+
 ## Wat is er gedaan (Golf 1)
 
 | # | Agent | Opdracht | Rapport |
@@ -55,9 +57,54 @@ De **hoofdclaim van de map** — "Jaccard ≈ 0,02 = statistische onmogelijkheid
 - 4% van de tokens (met `?` of `@`) is weggelaten.
 - De paragraafmarkers ontbreken in RF1b, dus H3 rust op één transcriptie.
 
-## Open keuzes (zie vragen in chat)
+## Golf 2: resultaten (H1, H2, H3)
 
-1. Mogen agents echte **vergelijkingsteksten downloaden** (Latijn, middeleeuws Italiaans, Duits)?
-2. Welke **hypotheses** gaan in Golf 2?
-3. Wat doen we met de gepubliceerde **Zenodo-record 18346527**, waarvan de kernclaim nu weerlegd is?
-4. **Commit en PR** van `swarm/`?
+Jouw keuzes: baselines downloaden = ja · Golf 2 = H1 + H2/H3 · Zenodo = later beslissen · commit en PR = ja.
+
+### H1: EVA-artefact? → **grotendeels weerlegd** ([04](04_H1_eva_segmentation.md))
+
+| Conditie | h2 (bits) |
+|---|---|
+| Voynich EVA ruw (A / B) | 2,19 (2,18 / 2,00) |
+| Voynich S1–S3 (ch/sh/gallows, ii/iin, ee als eenheid) | 2,26 – 2,43 |
+| Latijn (Caesar) / Italiaans (Dante) / Duits (Faust) / Engels (Austen) | 3,29 / 3,10 / 3,14 / 3,28 |
+| Eerlijke vergelijking: tekens samenvoegen bij beide, alfabet van ~35–42 | Voynich 2,59–2,84 tegenover talen 3,35–3,62 (kloof ≈ 0,75 bit) |
+| Talen als verbose cipher (1 letter → 2 tekens) | 2,08–2,17, **gelijk aan Voynich**, maar woorden van 8–12 tekens (Voynich ≈ 5) |
+
+- **Hard:** het is geen eenvoudige monoalfabetische substitutie van Latijn, Italiaans, Duits of Engels. De lage h2 is geen artefact van EVA.
+- **Open:** verbose cipher, syllabarium, abjad of afgekorte tekst, en andere brontalen.
+
+### H2: regel = functionele eenheid → **sterk ondersteund** ([05](05_H2H3_line_paragraph.md))
+
+- Regel-finale *-m*: 15,3% tegenover 1,0% midden in de regel (×15,8; z = +51). In RF1b: 14,9%. Ook *-g* ×30.
+- Regelbegin: *y* ×5,2, *p* ×7,2, *t* ×3,5; *c* juist ondervertegenwoordigd (×0,19).
+- Het effect zit **alleen in het buitenste woord**, geldt op **elke** regel (niet alleen de eerste) en repliceert in A en B, bij handen 1–3 en in de grote secties. De sterkte verschilt: A ×6, B ×31.
+- De woorden met *-m* zijn **gewone stammen** die midden in de regel op *-l*, *-r* of *-n* eindigen. Ze zijn niet ingekort. Hoe langer de regel, hoe vaker *-m* (10% → 25%).
+- **Uitgesloten:** doorlopend proza dat alleen aan de kantlijn is afgebroken. **Open:** een schrijfconventie (een eindvariant van een letter, zoals de Latijnse eind-*-m*/*-ꝯ*) of een generator die per regel een toestand bijhoudt.
+
+### H3: gallows aan het alinea-begin → **ondersteund als positiegebonden klasse; "geen klankwaarde" niet aangetoond**
+
+- 82,7% tegenover een nulmodel van 8,0% (z = +79). In RF1b: 71%.
+- Het gaat alleen om het **eerste woord** (bij woord 2 is het al 6,5%). Vooral **p** (54% tegenover 8% midden in de regel); *k* juist veel minder.
+- De strip-toets zegt niets: zonder gallows matcht 70,4% een bestaand woord, tegenover 68,1% bij het nulmodel.
+
+## Bijgewerkt beeld: wat het is en wat het NIET is
+
+**Uitgesloten (hard):**
+1. Een "Jaccard-anomalie" als bewijs voor mechanische generatie.
+2. Eenvoudige letter-voor-letter-vervanging van Latijn, Italiaans, Duits of Engels.
+3. Doorlopend proza dat zonder regelbewustzijn is afgebroken.
+4. Een homogene tekst (A/B, handen en secties verschillen).
+
+**Wel (robuust):** een systeem met lage voorspelbaarheid per teken, korte woorden, *positiegebonden varianten* (regel-eind, regel-begin, alinea-begin) en verschillende "dialecten" per hand.
+
+**Sterkste kandidaat-families voor Golf 3:**
+- **K1:** een verbose cipher of syllabarium **met afkortingen**. Dat verklaart de lage h2 én de korte woorden.
+- **K2:** een **positiegebonden schrijfconventie** (eindvormen, zoals in Latijnse brevigrafie of Arabisch/Hebreeuws schrift).
+- **K3:** een **generator met toestanden** (regel en alinea als reset).
+
+## Open keuzes
+
+1. Golf 3: welke kandidaat-familie toetsen?
+2. Zenodo-record 18346527: nog steeds "later beslissen".
+3. PR: de branch staat gepusht; de PR is nog niet aangemaakt (`gh` ontbreekt).

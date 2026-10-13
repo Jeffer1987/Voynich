@@ -16,7 +16,7 @@ th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);verti
 ol li,ul li{margin:4px 0}
 </style></head><body><main>
 <h1>Voynich-zwerm: status</h1>
-<p class="sub">13 okt 2026 · Golf 1 afgerond · supervisor Opus 5.5 · 1× Haiku 5.5, 2× Sonnet 5.5</p>
+<p class="sub">13 okt 2026 · Golf 1 + 2 afgerond · supervisor Opus 5.5 · 1× Haiku 5.5, 2× Sonnet 5.5</p>
 
 <div class="kpis">
 <div class="k"><b>81</b><span>claims geïnventariseerd</span></div>
@@ -39,30 +39,31 @@ ol li,ul li{margin:4px 0}
 <tr><td>(Bijna-)identieke buurwoorden</td><td>×1,4 / ×1,5</td><td class="warn">Zwak</td></tr>
 </table></div>
 
-<h2>Hypotheses voor Golf 2</h2>
+<h2>Golf 2: resultaten</h2>
 <div class="wrap"><table>
-<tr><th>ID</th><th>Hypothese</th><th>Toets</th></tr>
-<tr><td class="t">H1</td><td>Lage h2 is een artefact van de EVA-tekenindeling (ch/sh/ii/iin = 1 teken)</td><td>Herberekenen met alternatieve tekensets, vergelijken met Latijn en Italiaans</td></tr>
-<tr><td class="t">H2</td><td>De regel is een functionele eenheid (schrijfconventie of herstart van een generator)</td><td>Effecten per hand en sectie; vergelijken met afkortingen aan het regeleinde in Latijnse handschriften</td></tr>
-<tr><td class="t">H3</td><td>Gallows aan het alinea-begin = opmaak of markering, geen klank</td><td>Effect op 1e teken, woord of regel? Woord zonder gallows wordt dan een bekend woord?</td></tr>
-<tr><td class="t">H4</td><td>Currier A/B = dialect of instelling van één systeem</td><td>Classificatie: sluit het aan op handen of op secties? Gedeelde stammen?</td></tr>
-<tr><td class="t">H5</td><td>Zelfkopiëren (Timm &amp; Schinner) verklaart de lokale gelijkenis</td><td>Voorspelde sterkte tegenover de gemeten ×1,5</td></tr>
-<tr><td class="t">H6</td><td>Gelaagde woordstructuur (stam + affixen)</td><td>Automatisch geleerde grammatica, dekking tegenover schud-nul</td></tr>
+<tr><th>ID</th><th>Hypothese</th><th>Uitkomst</th><th>Oordeel</th></tr>
+<tr><td class="t">H1</td><td>Lage h2 is een EVA-artefact</td><td>Na samenvoegen hooguit 2,26–2,43; talen 3,10–3,29; de kloof blijft ≈0,75 bit. Een verbose cipher geeft 2,1 (zelfde niveau), maar woorden van 8–12 tekens tegenover 5.</td><td class="bad">Weerlegd</td></tr>
+<tr><td class="t">H2</td><td>De regel is een functionele eenheid</td><td>Regel-finale <i>-m</i> 15,3% tegenover 1,0% (z = +51; RF1b ook). Alleen het buitenste woord, op elke regel, in A en B. Het gaat om gewone stammen (midden in de regel -l/-r/-n).</td><td class="ok">Sterk ondersteund</td></tr>
+<tr><td class="t">H3</td><td>Gallows aan het alinea-begin = markering</td><td>82,7% tegenover 8% (z = +79). Alleen het 1e woord, vooral <i>p</i> (54%). De strip-toets zegt niets.</td><td class="warn">Deels: positieklasse ja, "geen klank" onbewezen</td></tr>
 </table></div>
 
-<h2>Wat het (voorlopig) NIET is</h2>
+<h2>Wat het (hard) NIET is</h2>
 <ul>
-<li><span class="bad">Niet aangetoond:</span> mechanische generatie op basis van regel-onafhankelijkheid</li>
-<li><span class="warn">Waarschijnlijk niet:</span> eenvoudige substitutie van een Europese taal in EVA-segmentatie (h2 te laag; eerst H1)</li>
-<li><span class="bad">Niet homogeen:</span> de tekst gedraagt zich anders per hand en per sectie</li>
+<li>Geen bewijs voor mechanische generatie via de "Jaccard-anomalie"</li>
+<li>Geen eenvoudige letter-voor-letter-substitutie van Latijn, Italiaans, Duits of Engels</li>
+<li>Geen doorlopend proza dat zonder regelbewustzijn is afgebroken</li>
+<li>Geen homogene tekst (A/B, handen en secties verschillen)</li>
 </ul>
 
+<h2>Kandidaat-families voor Golf 3</h2>
+<div class="wrap"><table>
+<tr><th>ID</th><th>Familie</th><th>Waarom</th></tr>
+<tr><td class="t">K1</td><td>Verbose cipher of syllabarium met afkortingen</td><td>Verklaart de lage h2 én de korte woorden</td></tr>
+<tr><td class="t">K2</td><td>Positiegebonden schrijfconventie (eindvormen, brevigrafie)</td><td>Verklaart -m aan het regeleinde en p/t aan het begin</td></tr>
+<tr><td class="t">K3</td><td>Generator met toestanden per regel/alinea</td><td>Alternatieve verklaring voor H2/H3</td></tr>
+</table></div>
+
 <h2>Open keuzes</h2>
-<ol>
-<li>Vergelijkingsteksten downloaden (Latijn, Italiaans, Duits)?</li>
-<li>Welke hypotheses in Golf 2?</li>
-<li>Wat doen we met de Zenodo-record 18346527?</li>
-<li>Commit en PR van <code>swarm/</code>?</li>
-</ol>
-<p class="sub">Details: 00_STATUS.md · 01_claim_inventory.md · 02_code_audit.md · 03_remeasurement.md · scripts/</p>
+<ol><li>Welke familie toetsen in Golf 3?</li><li>Zenodo-record: later beslissen</li><li>PR: branch gepusht, PR nog aan te maken</li></ol>
+<p class="sub">Details: 00_STATUS.md · 01_claim_inventory.md · 02_code_audit.md · 03_remeasurement.md · 04_H1_eva_segmentation.md · 05_H2H3_line_paragraph.md · scripts/</p>
 </main></body></html>
