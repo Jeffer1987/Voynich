@@ -3,7 +3,7 @@
 **Datum:** 2026-10-13 · **Supervisor:** Claude Opus 5.5 · **Zwerm:** 1× Haiku 5.5, 2× Sonnet 5.5
 **Branch:** `claude/voynich-subagents-hypotheses-593993`
 
-> **Stand:** Golf 1–5 afgerond. PR: https://github.com/Jeffer1987/Voynich/pull/1. Zie onderaan voor Golf 3–4 en het laatste beeld.
+> **Stand:** Golf 1–6 afgerond. PR: https://github.com/Jeffer1987/Voynich/pull/1. Zie onderaan voor Golf 3–4 en het laatste beeld.
 
 ## Wat is er gedaan (Golf 1)
 
@@ -137,7 +137,32 @@ Jouw keuzes: baselines downloaden = ja · Golf 2 = H1 + H2/H3 · Zenodo = later 
 
 **Spanningsveld:** de schrijfconventies (eindvorm, alinea-markering) zien er *menselijk en schrijversgebonden* uit, terwijl de woordvorming eerder *combinatorisch* lijkt.
 
+## Golf 6: generatoren eerlijk getoetst ([13](13_generators.md))
+
+| Model | Parameters | Uitkomst |
+|---|---|---|
+| G1 zelfkopiëren (Timm & Schinner) | 5 | Faalt op h2 (3,4) en woordlengte |
+| G2 tabel + rooster (Rugg) | 6 + tabel | Faalt op het aandeel hapaxen (max 0,56) |
+| G3 slot-sampler (i.i.d.) | 283 gefit | Faalt (TTR 0,34; h2 2,45) |
+| G3j / G4j slotblokken (+ lokaal kopiëren) | ~2160 gefit uit Voynich | **Slagen voor de kerntoets** (score 0,85 / 0,95), maar dat is **grotendeels circulair** |
+| Beste K1 (cipher) | 6–7 | Haalt de kerntoets niet (score 1,01–1,21) |
+
+- **Lokaal kopiëren** is het enige mechanisme dat de lichte samenhang tussen regels en de (bijna-)identieke buurwoorden verklaart, maar niet allebei tegelijk bij dezelfde instelling.
+- De positiepatronen T1 (*-am* aan het regeleinde), T2 (*p*-gallows) en T3 (A/B) **ontstaan in geen enkel model vanzelf**.
+- **Oordeel: geen winnaar per parameter.** K1 verklaart h2 en woordlengte goedkoop; slot + kopiëren verklaart hapaxen, TTR en buurwoorden, maar alleen met heel veel gefitte waarden.
+
+## Synthese na 6 golven
+
+Geen enkel bekend model verklaart alles. Het beeld wijst op een **gelaagd systeem**:
+1. **Woordbouw** uit vaste posities (slots), die de vele unieke woordvormen geeft;
+2. **lage voorspelbaarheid per teken** (h2), zoals bij een verbose codering;
+3. **lichte lokale herhaling** (kopiëren of thematische samenhang);
+4. **schrijfconventies op het niveau van het schrift** (eindvorm *-am*, *p*-gallows aan het begin van een alinea);
+5. **twee instellingen (A/B)**, gekoppeld aan schrijvers, plus woordenschat per onderwerp.
+
+**Nog door geen enkel model verklaard:** T1, T2 en T3, de Zipf-helling −1,02 samen met 0,71 hapaxen, en de samenhang tussen regels samen met de buurwoorden en de lage h2.
+
 ## Open keuzes
 
-1. **Golf 6** (zie vraag in chat).
+1. **Golf 7** (zie vraag in chat).
 2. **Zenodo-record 18346527:** later beslissen.

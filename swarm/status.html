@@ -16,7 +16,7 @@ th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);verti
 ol li,ul li{margin:4px 0}
 </style></head><body><main>
 <h1>Voynich-zwerm: status</h1>
-<p class="sub">13 okt 2026 · Golf 1–5 afgerond · <a href="https://github.com/Jeffer1987/Voynich/pull/1">PR #1</a> · supervisor Opus 5.5 · 1× Haiku 5.5, 2× Sonnet 5.5</p>
+<p class="sub">13 okt 2026 · Golf 1–6 afgerond · <a href="https://github.com/Jeffer1987/Voynich/pull/1">PR #1</a> · supervisor Opus 5.5 · 1× Haiku 5.5, 2× Sonnet 5.5</p>
 
 <div class="kpis">
 <div class="k"><b>81</b><span>claims geïnventariseerd</span></div>
@@ -71,14 +71,23 @@ ol li,ul li{margin:4px 0}
 <tr><td class="t">5B</td><td>De eindvorm -am lukt alleen als regel op cipher-tekens (schrift, niet taal). De p-gallows lukken met één regel. A/B is gekunsteld. ~13 parameters.</td><td class="warn">Kan, maar gekunsteld</td></tr>
 </table></div>
 
-<h2>Laatste beeld</h2>
+<h2>Golf 6: generatoren</h2>
+<div class="wrap"><table>
+<tr><th>Model</th><th>Uitkomst</th><th>Oordeel</th></tr>
+<tr><td class="t">G1 zelfkopiëren</td><td>h2 3,4, woorden te lang</td><td class="bad">Faalt</td></tr>
+<tr><td class="t">G2 tabel+rooster</td><td>hapaxen max 0,56</td><td class="bad">Faalt</td></tr>
+<tr><td class="t">G3j/G4j slots(+kopie)</td><td>Slaagt, maar ~2160 waarden gefit uit Voynich zelf</td><td class="warn">Circulair</td></tr>
+<tr><td class="t">K1 cipher</td><td>Goedkoop voor h2 en woordlengte, faalt op hapaxen</td><td class="warn">Deels</td></tr>
+</table></div>
+
+<h2>Synthese na 6 golven</h2>
 <ul>
-<li><span class="bad">NIET:</span> Jaccard-anomalie · eenvoudige substitutie · eenvoudig syllabarium of abjad · proza zonder regelbewustzijn · homogene tekst · <b>woord-voor-woord-codering van Latijn of Italiaans</b></li>
-<li><span class="ok">WEL:</span> positiegebonden lettervormen op het niveau van het schrift (-am, p-gallows) · twee instellingen A/B per schrijver · woordenschat per onderwerp</li>
-<li><span class="warn">OPEN:</span> waar komen de vele unieke woordvormen vandaan? Samenstelling binnen het woord, een rijke brontaal, of een generator?</li>
+<li><span class="bad">NIET:</span> Jaccard-anomalie · eenvoudige substitutie · eenvoudig syllabarium of abjad · woord-voor-woord-codering van Latijn of Italiaans · eenvoudige zelfkopie · eenvoudig rooster (Rugg) · homogene tekst</li>
+<li><span class="ok">WEL:</span> gelaagd systeem: woordbouw uit slots + lage h2 + lichte lokale herhaling + schrijfconventies (-am, p-gallows) + twee instellingen A/B per schrijver</li>
+<li><span class="warn">ONVERKLAARD:</span> T1/T2/T3 ontstaan in geen enkel model vanzelf; Zipf-helling −1,02 samen met hapaxen 0,71</li>
 </ul>
 
 <h2>Open keuzes</h2>
-<ol><li>Golf 6: generatoren eerlijk toetsen tegen dezelfde vingerafdruk, en/of andere brontalen</li><li>Zenodo-record: later beslissen</li></ol>
-<p class="sub">Details: 00_STATUS.md · 01_claim_inventory.md · 02_code_audit.md · 03_remeasurement.md · 04_H1_eva_segmentation.md · 05_H2H3_line_paragraph.md · 06–12 · scripts/</p>
+<ol><li>Golf 7: hybride model, eindrapport, of stoppen</li><li>Zenodo-record: later beslissen</li></ol>
+<p class="sub">Details: 00_STATUS.md · 01_claim_inventory.md · 02_code_audit.md · 03_remeasurement.md · 04_H1_eva_segmentation.md · 05_H2H3_line_paragraph.md · 06–13 · scripts/</p>
 </main></body></html>
