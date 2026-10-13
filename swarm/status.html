@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Voynich Zwerm Status</title>
+<style>
+:root{--bg:#faf8f3;--fg:#1d1b17;--mut:#6b655a;--card:#fff;--line:#e4dfd3;--ok:#2f7d4f;--bad:#b23a2e;--warn:#a26a00;--acc:#3b4f8f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16151a;--fg:#ecebe6;--mut:#a29d92;--card:#1f1e24;--line:#33313a;--ok:#5cc28a;--bad:#ff7a6b;--warn:#e0b04a;--acc:#9fb0ff}}
+:root[data-theme="dark"]{--bg:#16151a;--fg:#ecebe6;--mut:#a29d92;--card:#1f1e24;--line:#33313a;--ok:#5cc28a;--bad:#ff7a6b;--warn:#e0b04a;--acc:#9fb0ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 system-ui,sans-serif}
+main{max-width:920px;margin:0 auto;padding:28px 16px 60px}h1{font-size:1.6rem;margin:0 0 4px}h2{font-size:1.1rem;margin:32px 0 10px;color:var(--acc)}
+.sub{color:var(--mut);margin:0 0 20px}.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.k{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}.k b{display:block;font-size:1.5rem}.k span{color:var(--mut);font-size:.85rem}
+.verdict{background:var(--card);border-left:4px solid var(--bad);border-radius:8px;padding:12px 14px}
+.wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:8px;font-size:.92rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--mut);font-weight:600}
+.t{font-weight:600;white-space:nowrap}.ok{color:var(--ok)}.bad{color:var(--bad)}.warn{color:var(--warn)}
+ol li,ul li{margin:4px 0}
+</style></head><body><main>
+<h1>Voynich-zwerm: status</h1>
+<p class="sub">13 okt 2026 · Golf 1 afgerond · supervisor Opus 5.5 · 1× Haiku 5.5, 2× Sonnet 5.5</p>
+
+<div class="kpis">
+<div class="k"><b>81</b><span>claims geïnventariseerd</span></div>
+<div class="k"><b class="ok">8</b><span>KEEP</span></div>
+<div class="k"><b class="warn">35</b><span>VERIFY</span></div>
+<div class="k"><b class="bad">38</b><span>DISCARD</span></div>
+</div>
+
+<h2>Kernconclusie</h2>
+<div class="verdict"><b>De "Jaccard-anomalie" is weerlegd.</b> De overlap tussen opeenvolgende regels is 0,032, tegenover 0,012 (globaal geschud) en 0,025 (geschud binnen het folio). De regels hangen dus <i>méér</i> samen dan bij toeval, niet minder. De lage absolute waarde komt door korte regels en een rijke woordenschat. De drempels en het "CONFIRMED"-oordeel in de oude code zijn verzonnen.</div>
+
+<h2>Wat staat wél (ZL3b, gerepliceerd op RF1b)</h2>
+<div class="wrap"><table>
+<tr><th>Bevinding</th><th>Waarde</th><th>Oordeel</th></tr>
+<tr><td>Conditionele tekenentropie h2</td><td>2,16 bits (Engels ≈ 3,3)</td><td class="ok">Anomaal laag</td></tr>
+<tr><td>Regel als eenheid (begin- en eindtekens)</td><td>regel-finale <i>m</i> ≈ 15%</td><td class="ok">≫100× nulmodel</td></tr>
+<tr><td>Gallows aan het alinea-begin</td><td>83% tegenover 6–9%</td><td class="ok">Sterk (1 transcriptie)</td></tr>
+<tr><td>Verschil Currier A/B, handen, secties</td><td>h2 1,8–2,3</td><td class="ok">Sterk</td></tr>
+<tr><td>Slotgrammatica</td><td>66% van tokens (geschud: 11%)</td><td class="warn">Matig</td></tr>
+<tr><td>(Bijna-)identieke buurwoorden</td><td>×1,4 / ×1,5</td><td class="warn">Zwak</td></tr>
+</table></div>
+
+<h2>Hypotheses voor Golf 2</h2>
+<div class="wrap"><table>
+<tr><th>ID</th><th>Hypothese</th><th>Toets</th></tr>
+<tr><td class="t">H1</td><td>Lage h2 is een artefact van de EVA-tekenindeling (ch/sh/ii/iin = 1 teken)</td><td>Herberekenen met alternatieve tekensets, vergelijken met Latijn en Italiaans</td></tr>
+<tr><td class="t">H2</td><td>De regel is een functionele eenheid (schrijfconventie of herstart van een generator)</td><td>Effecten per hand en sectie; vergelijken met afkortingen aan het regeleinde in Latijnse handschriften</td></tr>
+<tr><td class="t">H3</td><td>Gallows aan het alinea-begin = opmaak of markering, geen klank</td><td>Effect op 1e teken, woord of regel? Woord zonder gallows wordt dan een bekend woord?</td></tr>
+<tr><td class="t">H4</td><td>Currier A/B = dialect of instelling van één systeem</td><td>Classificatie: sluit het aan op handen of op secties? Gedeelde stammen?</td></tr>
+<tr><td class="t">H5</td><td>Zelfkopiëren (Timm &amp; Schinner) verklaart de lokale gelijkenis</td><td>Voorspelde sterkte tegenover de gemeten ×1,5</td></tr>
+<tr><td class="t">H6</td><td>Gelaagde woordstructuur (stam + affixen)</td><td>Automatisch geleerde grammatica, dekking tegenover schud-nul</td></tr>
+</table></div>
+
+<h2>Wat het (voorlopig) NIET is</h2>
+<ul>
+<li><span class="bad">Niet aangetoond:</span> mechanische generatie op basis van regel-onafhankelijkheid</li>
+<li><span class="warn">Waarschijnlijk niet:</span> eenvoudige substitutie van een Europese taal in EVA-segmentatie (h2 te laag; eerst H1)</li>
+<li><span class="bad">Niet homogeen:</span> de tekst gedraagt zich anders per hand en per sectie</li>
+</ul>
+
+<h2>Open keuzes</h2>
+<ol>
+<li>Vergelijkingsteksten downloaden (Latijn, Italiaans, Duits)?</li>
+<li>Welke hypotheses in Golf 2?</li>
+<li>Wat doen we met de Zenodo-record 18346527?</li>
+<li>Commit en PR van <code>swarm/</code>?</li>
+</ol>
+<p class="sub">Details: 00_STATUS.md · 01_claim_inventory.md · 02_code_audit.md · 03_remeasurement.md · scripts/</p>
+</main></body></html>
