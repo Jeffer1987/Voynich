@@ -3,7 +3,7 @@
 **Datum:** 2026-10-13 · **Supervisor:** Claude Opus 5.5 · **Zwerm:** 1× Haiku 5.5, 2× Sonnet 5.5
 **Branch:** `claude/voynich-subagents-hypotheses-593993`
 
-> **Stand:** Golf 1–4 afgerond. PR: https://github.com/Jeffer1987/Voynich/pull/1. Zie onderaan voor Golf 3–4 en het laatste beeld.
+> **Stand:** Golf 1–5 afgerond. PR: https://github.com/Jeffer1987/Voynich/pull/1. Zie onderaan voor Golf 3–4 en het laatste beeld.
 
 ## Wat is er gedaan (Golf 1)
 
@@ -124,7 +124,20 @@ Jouw keuzes: baselines downloaden = ja · Golf 2 = H1 + H2/H3 · Zenodo = later 
 
 **Wat het WEL lijkt:** een schrift met **positiegebonden lettervormen** (eindvorm *-am* aan het regeleinde, *p*-gallows aan het begin van een alinea), **twee "instellingen" (A/B)** die vastzitten aan schrijvers, en een **woordenschat per onderwerp**. De lage h2 en de korte woorden passen het best bij een **verbose codering van afgekorte tekst**, maar de rijkdom aan woordvormen (hapaxen) is nog niet verklaard.
 
+## Golf 5: K1 verder getoetst
+
+| Toets | Uitkomst |
+|---|---|
+| **5A: middeleeuwse Latijnse kruidentekst** ([11](11_K1_herbal.md)) | Bronnen: Macer Floridus en Apicius. Het **aandeel hapaxen** daarin is zelf al lager (0,54–0,59) dan bij Voynich (0,73) en zelfs lager dan bij Caesar (0,63). **0 configuraties** halen alle eisen. Afkortingen voegen woordtypes samen, dus het aandeel hapaxen daalt nog verder. Alleen homofonen per voorkomen halen 0,7, maar dan worden de woorden te lang (8,5) en is h2 te hoog. **K1 wordt hierdoor zwakker.** |
+| **5B: positiepatronen nabootsen** ([12](12_K1_positional.md)) | Niets ontstaat vanzelf. De **eindvorm *-am* lukt alleen met een regel op het niveau van de cipher-tekens**, niet als afkorting in de brontekst. Dat wijst op een conventie van het *schrift*, niet van de taal. De *p*-gallows lukken met één markeerregel. A/B alleen met een gerichte, gekunstelde regel. In totaal ~13 extra parameters voor ~8 meetwaarden, dus een hoog risico op overfitting. |
+
+## Laatste beeld (na Golf 5)
+
+**Nieuw hard punt:** de combinatie van **lage h2 + korte woorden + zeer veel unieke woordvormen (hapaxen 0,73)** past niet bij een woord-voor-woord-codering van Latijn of Italiaans, ook niet van een kruidentekst. Het hoge aandeel unieke woordvormen moet ergens anders vandaan komen: woorden die *binnenin* worden samengesteld (een slot- of combinatiesysteem), een brontaal met veel woordvormen, of een generator.
+
+**Spanningsveld:** de schrijfconventies (eindvorm, alinea-markering) zien er *menselijk en schrijversgebonden* uit, terwijl de woordvorming eerder *combinatorisch* lijkt.
+
 ## Open keuzes
 
-1. **Golf 5:** (a) K1 opnieuw met een middeleeuwse Latijnse kruidentekst als bron; (b) toetsen of een model ook de eindvorm *-am*, de *p*-gallows en A/B reproduceert; (c) andere transcripties en een herhaling binnen één sectie.
-2. **Zenodo-record 18346527:** de kernclaim is weerlegd. Wil je een erratum of een nieuwe versie?
+1. **Golf 6** (zie vraag in chat).
+2. **Zenodo-record 18346527:** later beslissen.
