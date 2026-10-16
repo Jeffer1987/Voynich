@@ -1,0 +1,53 @@
+== rf1b
+T1c among words ending l/r/m: final share m=0.412 l=0.334 r=0.254 ; mid share m=0.024 l=0.510 r=0.466
+   share of -m among l/r/m endings by preceding glyph (final | mid): 
+    a: 0.50 (n=851) | 0.040 (n=2936)
+    o: 0.22 (n=383) | 0.012 (n=3536)
+    i: 0.59 (n=54) | 0.037 (n=374)
+    ^: 0.29 (n=14) | 0.000 (n=212)
+    l: 0.15 (n=13) | 0.000 (n=15)
+    d: 0.10 (n=10) | 0.000 (n=18)
+    y: 0.12 (n=8) | 0.000 (n=6)
+    ch: 0.00 (n=5) | 0.000 (n=41)
+   stems n=43: per-stem final m-share variance 0.0472 vs binomial null 0.0220 (sd 0.0051) z=4.9 ; pooled share 0.38
+   histogram of per-stem m-share: [ 1  9 14 11  6  2]
+T4 line-initial word strip test (remainder attested as a mid-line word type)
+   glyph | init rate | init attested | mid attested (same first glyph, same length) | n_init
+   y | 0.145 | 0.859 | 0.810 (sd 0.015) z=+3.2 | 505
+   d | 0.150 | 0.924 | 0.886 (sd 0.010) z=+3.7 | 550
+   t | 0.083 | 0.784 | 0.716 (sd 0.021) z=+3.2 | 306
+   p | 0.067 | 0.688 | 0.771 (sd 0.022) z=-3.7 | 247
+   s | 0.101 | 0.904 | 0.852 (sd 0.016) z=+3.2 | 354
+   o | 0.143 | 0.816 | 0.810 (sd 0.016) z=+0.4 | 446
+   q | 0.148 | 0.902 | 0.909 (sd 0.010) z=-0.6 | 532
+   k | 0.016 | 0.825 | 0.759 (sd 0.054) z=+1.2 | 57
+   c | 0.001 | 0.500 | 0.580 (sd 0.283) z=-0.3 | 4
+   l | 0.017 | 0.934 | 0.910 (sd 0.030) z=+0.8 | 61
+   a | 0.008 | 0.250 | 0.226 (sd 0.089) z=+0.3 | 16
+   word length (glyphs): init vs mid by first glyph; init remainder after stripping first glyph
+    y: init 5.00 mid 4.68 diff +0.33 z=3.1 (n=540,633)
+    d: init 4.62 mid 4.32 diff +0.30 z=4.3 (n=557,1356)
+    t: init 4.90 mid 4.42 diff +0.48 z=4.1 (n=307,387)
+    p: init 5.80 mid 5.06 diff +0.75 z=4.2 (n=249,90)
+    s: init 4.44 mid 3.06 diff +1.38 z=9.6 (n=376,434)
+    o: init 4.74 mid 4.60 diff +0.13 z=1.7 (n=533,4385)
+    q: init 5.66 mid 5.80 diff -0.14 z=-2.3 (n=550,3571)
+    k: init 4.41 mid 4.38 diff +0.04 z=0.2 (n=58,700)
+    c: init 6.25 mid 4.66 diff +1.59 z=0.6 (n=4,35)
+    l: init 4.28 mid 4.47 diff -0.19 z=-1.0 (n=65,877)
+   all: init 4.86 mid 4.46; init excl y/d/t/p 4.77 vs mid excl same 4.46
+   init tokens whose exact type occurs mid-line: 0.70 ; last-word tokens: 0.70 ; mid tokens (leave-one-out) : 0.86
+   first glyph of remainder after stripping y/d vs first glyph of mid words: chi2 p (cells>=5)=0
+   top remainder first glyphs: [('ch', 0.27, 0.2), ('a', 0.26, 0.06), ('sh', 0.15, 0.09), ('k', 0.11, 0.03), ('t', 0.09, 0.02), ('o', 0.07, 0.21)]
+T4c per-folio (n=109, >=12 lines) rho(final -m rate, initial y/d rate)=0.416 raw p=6.65e-06 ; within (section,hand) permutation null 0.161 sd 0.077 z=3.3
+   next-line y/d start after line-final m: 0.350 vs after non-m 0.290 (diff +0.060, within-folio perm z=1.3, n=3604 pairs)
+   same line: y/d start given final m 0.305 vs not 0.293 (within-folio perm z=-1.1)
+T5 folio-fixed-effects logit -m ~ prefix chars, n words: b_pre=0.06 z=0.4 ; b_n=0.41 z=2.8
+   + para-end flag (folio FE): b_pend=0.00 z=0.0
+   cell metrics within (section I, hand H): lines, final-m %, mid-m %, ratio, init y/d %, mid y/d %, ratio, r(-m,n words) within-cell, z (within-folio perm)
+    ('S', '3'): 1082, 22.1, 0.75, 29x, 30.5, 5.0, 6.1x, r=0.162 z=5.3
+    ('H', '1'): 1068, 9.8, 1.70, 6x, 29.3, 16.8, 1.7x, r=0.089 z=3.1
+    ('B', '2'): 691, 6.8, 0.05, 129x, 19.2, 7.7, 2.5x, r=0.079 z=1.2
+    ('H', '2'): 221, 18.1, 1.06, 17x, 32.6, 11.6, 2.8x, r=0.028 z=0.7
+    ('P', '1'): 185, 14.6, 1.26, 12x, 42.7, 12.7, 3.4x, r=-0.028 z=-0.2
+    ('T', '2'): 161, 22.4, 0.81, 28x, 27.3, 11.7, 2.3x, r=0.063 z=2.3

@@ -1,0 +1,12 @@
+== rf1b
+P(final m | mid-line -m present)=0.299 (n=154) vs absent 0.143 ; folio-perm z=2.3
+corr(final m, share of -l/-r words earlier in line)=0.029 folio-perm z=1.5
+lag-1 autocorr of final-m between consecutive lines r=0.037 within-folio perm z=-3.1 (n=3360)
+lag-1 autocorr of final-g between consecutive lines r=0.015 within-folio perm z=-2.1 (n=3360)
+page-level overdispersion of final-m within (section,hand) cells: chi2=237 on 158 pages (ratio 1.50; 1.0 = binomial per-line independence)
+   n words 3-4: lines 536 final-m 9.1%
+   n words 5-6: lines 830 final-m 10.2%
+   n words 7-8: lines 966 final-m 13.8%
+   n words 9-10: lines 839 final-m 17.4%
+   n words 11-13: lines 502 final-m 26.3%
+   n words 14-30: lines 45 final-m 20.0%
